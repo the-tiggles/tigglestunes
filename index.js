@@ -85,7 +85,6 @@ bot.on("message", async msg => {
   if (msg.content.substring(0, 1) == "?") {
     // var args = msg.content.substring(1).split('');
     // var cmd = args[0];
-
     let messageArray = msg.content.split(" ");
     let cmd = messageArray[0].slice(1);
     let args = messageArray.slice(1);
@@ -96,9 +95,6 @@ bot.on("message", async msg => {
     const url = args[1] ? args[1].replace(/<(.+)>/g, '$1') : '';
     const serverQueue = queue.get(msg.guild.id);
     
-    console.log("the searchstring is " + searchString);
-    console.log("the args are " + args);
-    console.log("the cmd is " + cmd);
     switch (cmd) { 
       case "tplay":
       case "tp":
@@ -136,8 +132,8 @@ bot.on("message", async msg => {
               let index = 0;
               let theOptions = `
               __**Song selection:**__
-  ${videos.map(video2 => `**${++index} -** ${video2.title}`).join('\n')}
-  Please provide a value to select one of the search results ranging from 1-10.`;
+${videos.map(video2 => `**${++index} -** ${video2.title}`).join('\n')}
+Please provide a value to select one of the search results ranging from 1-10.`;
               msg.channel.send(theOptions).then(theOptions => {theOptions.delete(10000)});
             // eslint-disable-next-line max-depth
               try {
@@ -184,8 +180,8 @@ bot.on("message", async msg => {
       case "tq":
         let theQueue = `
         __🎶**Song queue:**🎶__ 
-  ${serverQueue.songs.map(song =>`**-** ${song.title}`).join('\n')}
-  ➡️**Now playing:** ${serverQueue.songs[0].title}`;
+${serverQueue.songs.map(song =>`**-** ${song.title}`).join('\n')}
+➡️**Now playing:** ${serverQueue.songs[0].title}`;
         if (!serverQueue) return msg.channel.send('There is nothing playing.');
         return msg.channel.send(theQueue).then(theQueue => {theQueue.delete(10000)});
       case "pause":
