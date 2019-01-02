@@ -1,0 +1,31 @@
+{
+  "name": "TigglesTunes",
+  "version": "0.0.1",
+  "description": "A simple Node Discord Bot app built on Express, instantly up and running.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "discord.js": "^11.4.2",
+    "ffmpeg-binaries": "^4.0.0",
+    "node-opus": "^0.3.1",
+    "opusscript": "^0.0.6",
+    "simple-youtube-api": "^5.1.1",
+    "ytdl-core": "^0.28.3"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "repository": {
+    "url": "https://github.com/tiggaaaaah/tigglestunes"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "discord",
+    "express"
+  ]
+}
