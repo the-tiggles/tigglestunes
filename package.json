@@ -5,7 +5,7 @@
   "description": "A simple Node Discord Bot app built on Express, instantly up and running.",
   "main": "index.js",
   "scripts": {
-    "start": "node .",
+    "start": "node index.js",
     "lint": "eslint ."
   },
   "engines": {
