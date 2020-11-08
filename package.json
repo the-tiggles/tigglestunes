@@ -1,11 +1,11 @@
 {
   "name": "TiggieTunes",
   "author": "Tiggles",
-  "version": "1.0.0",
-  "description": "A simple Node Discord Bot app built on Express, instantly up and running.",
+  "version": "1.0.1",
+  "description": "Gettin tiggy with it.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node .",
     "lint": "eslint ."
   },
   "engines": {
@@ -13,11 +13,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tiggaaaaah/tigglestunes"
+    "url": "git+https://github.com/tiggaaaaah/TigglesBot.git"
   },
+  "keywords": [],
+ 
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tiggaaaaah/TigglesBot/issues"
+  },
+  "homepage": "https://github.com/tiggaaaaah/TigglesBot#readme",
   "dependencies": {
-    "discord.js": "11.1.0",
-    "request": "2.81.0"
-  },
-  "license": "MIT"
+    "@discordjs/opus": "^0.3.2",
+    "discord.js": "^12.3.1",
+    "express": "^4.17.1",
+    "node-pre-gyp": "^0.15.0",
+    "opusscript": "0.0.7",
+    "superagent": "^6.1.0"
+  }
 }
