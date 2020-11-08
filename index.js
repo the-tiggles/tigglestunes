@@ -33,8 +33,12 @@ const botconfig = require("./botconfig.json");
 const Discord = require("discord.js");
 const express = require('express');
 const bot = new Discord.Client({disableMentions: 'everyone'});
+
+var app = express();
 const fs = require("fs"); //require a file system
-const app = express();
+const http = require('http');
+
+var purple = botconfig.purple;
 
 
 
