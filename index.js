@@ -32,7 +32,7 @@
 const botconfig = require("./botconfig.json");
 const Discord = require("discord.js");
 const express = require('express');
-const bot = new Discord.Client({disableEveryone: true});
+const bot = new Discord.Client({disableMentions: 'everyone'});
 const fs = require("fs"); //require a file system
 const app = express();
 
@@ -96,8 +96,8 @@ bot.on("message", async msg => {
     const serverQueue = queue.get(msg.guild.id);
     
     switch (cmd) { 
-      case "tplay":
-      case "tp":
+      case "play":
+      case "p":
         const voiceChannel = msg.member.voiceChannel;
         if (!args[1]) {
           msg.channel.send("Please provide a link");
@@ -157,7 +157,7 @@ Please provide a value to select one of the search results ranging from 1-10.`;
           return handleVideo(video, msg, voiceChannel);
         }
         break;
-      case "tskip": 
+      case "skip": 
         if (!msg.member.voiceChannel) return msg.channel.send('You are not in a voice channel!');
         if (!serverQueue) return msg.channel.send('There is nothing playing that I could skip for you.');
         serverQueue.connection.dispatcher.end('Skip command has been used!');
@@ -167,7 +167,7 @@ Please provide a value to select one of the search results ranging from 1-10.`;
         if (!serverQueue) return msg.channel.send('There is nothing playing that I could skip for you.');
         serverQueue.connection.dispatcher.end('Skip command has been used!');
         break;
-      case "tstop":
+      case "stop":
       case "stop":
         var server = servers[msg.guild.id];
         if (msg.guild.voiceConnection) msg.guild.voiceConnection.disconnect();
@@ -177,7 +177,7 @@ Please provide a value to select one of the search results ranging from 1-10.`;
         return msg.channel.send(`🎶 Now playing: **${serverQueue.songs[0].title}**`);
         break;
       case "q":
-      case "tq":
+      case "q":
         let theQueue = `
         __🎶**Song queue:**🎶__ 
 ${serverQueue.songs.map(song =>`**-** ${song.title}`).join('\n')}
