@@ -40,12 +40,15 @@ const http = require('http');
 
 var purple = botconfig.purple;
 
+let port = process.env.PORT;
+
 
 
 app.get("/", (request, response) => {
   response.sendStatus(200);
 });
-app.listen(process.env.PORT);
+app.listen(port);
+
 // bot.commands = new Discord.Collection();
 //this will boot up the bot and load the commands in the folder
 // ================================
