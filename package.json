@@ -15,12 +15,6 @@
     "type": "git",
     "url": "https://github.com/tiggaaaaah/tigglestunes"
   },
-  "keywords": [
-    "node",
-    "glitch",
-    "discord",
-    "express"
-  ],
   "dependencies": {
     "discord.js": "11.1.0",
     "request": "2.81.0"
