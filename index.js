@@ -27,12 +27,13 @@
 // ================================
 //  0 - Dependencies
 // ================================
-
-
-const botconfig = require("./botconfig.json");
-const Discord = require("discord.js");
 const express = require('express');
-const bot = new Discord.Client({disableMentions: 'everyone'});
+const path = require('path');
+
+const Discord = require("discord.js");
+var bot = new Discord.Client({disableMentions: 'everyone'});
+const botconfig = require("./botconfig.json");
+
 
 var app = express();
 const fs = require("fs"); //require a file system
@@ -44,9 +45,14 @@ let port = process.env.PORT;
 
 
 
-app.get("/", (request, response) => {
-  response.sendStatus(200);
-});
+app.use(express.static('site'))
+
+app.get('/', function(req, res) {
+  res.sendFile('./site/index.html', {root: __dirname });
+})
+app.get('/about', function(req, res) {
+  res.sendFile('./site/about.html', {root: __dirname });
+})
 app.listen(port);
 
 // bot.commands = new Discord.Collection();
