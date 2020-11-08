@@ -21,15 +21,14 @@
     "express"
   ],
   "dependencies": {
-    "express": "^4.17.1",
+    "discord": "^0.8.2",
     "discord.js": "^12.3.1",
+    "express": "^4.17.1",
     "ffmpeg-binaries": "^4.0.0",
     "node-opus": "^0.3.1",
     "opusscript": "^0.0.7",
     "simple-youtube-api": "^5.1.1",
     "ytdl-core": "^0.28.3"
   },
- 
-
   "license": "MIT"
 }
