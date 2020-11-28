@@ -1,7 +1,7 @@
 {
-  "name": "TiggieTunes",
+  "name": "tigglesbot",
   "version": "1.0.1",
-  "description": "Gettin tiggy with it.",
+  "description": "A bot for all things Tiggles.",
   "main": "index.js",
   "scripts": {
     "start": "node .",
@@ -12,10 +12,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/the-tiggles/tigglestunes.git"
+    "url": "git+https://github.com/tiggaaaaah/TigglesBot.git"
   },
   "keywords": [],
- 
+  "author": "Tiggles",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/tiggaaaaah/TigglesBot/issues"
