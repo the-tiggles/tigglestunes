@@ -76,7 +76,7 @@ fs.readdir("./commands/", (err, files) => {
     bot.commands.set(props.help.name, props);
   });
   console.groupEnd();
-});
+}); 
 
 // ================================
 //  1 - Start-up & Status
