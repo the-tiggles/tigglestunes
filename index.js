@@ -86,16 +86,21 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username}: ONLINE (${bot.guilds.cache.size})!`);
-  bot.user.setUsername("TigglesBot シ");
+  bot.user.setUsername("TiggieTunes");
   bot.user.setPresence({
     activity: {
-      name: '😎 I supply George with 2D girls'
+      name: 'the chillest, illest tunes'
     },
     status: 'online'
   })
   .catch(console.error);
 });
 
+
+bot.on('warn', console.warn);
+bot.on('error', console.error);
+bot.on('disconnect', () => console.log('I just disconnected, making sure you know, I will reconnect now...'));
+bot.on('reconnecting', () => console.log('I am reconnecting now!'));
 
 
 
@@ -133,11 +138,6 @@ bot.on("message", async message => {
   };
 });
 
-
-
-bot.on('error', err => {
-  console.warn(err);
-})
 
 
  
