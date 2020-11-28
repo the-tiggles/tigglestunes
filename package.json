@@ -1,6 +1,5 @@
 {
   "name": "TiggieTunes",
-  "author": "Tiggles",
   "version": "1.0.1",
   "description": "Gettin tiggy with it.",
   "main": "index.js",
@@ -13,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tiggaaaaah/TigglesBot.git"
+    "url": "git+https://github.com/the-tiggles/tigglestunes.git"
   },
   "keywords": [],
  
