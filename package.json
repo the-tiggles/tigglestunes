@@ -1,7 +1,7 @@
 {
-  "name": "tigglesbot",
+  "name": "TiggieTunes",
   "version": "1.0.1",
-  "description": "A bot for all things Tiggles.",
+  "description": "bot for music.",
   "main": "index.js",
   "scripts": {
     "start": "node .",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tiggaaaaah/TigglesBot.git"
+    "url": "git+https://github.com/the-tiggles/TiggieTunes.git"
   },
   "keywords": [],
   "author": "Tiggles",
@@ -24,9 +24,13 @@
   "dependencies": {
     "@discordjs/opus": "^0.3.2",
     "discord.js": "^12.3.1",
+    "node-opus": "^0.3.3",
+    "ffmpeg-binaries": "^4.0.0",
+    "simple-youtube-api": "^5.1.1",
     "express": "^4.17.1",
     "node-pre-gyp": "^0.15.0",
     "opusscript": "0.0.7",
-    "superagent": "^6.1.0"
+    "superagent": "^6.1.0",
+    "ytdl-core": "^0.28.3"
   }
 }
